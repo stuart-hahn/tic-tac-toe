@@ -43,7 +43,75 @@ h6 {
 }
 
 /* STYLES */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #282c34;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#gameboard {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #61dafb;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #282c34;
+  cursor: pointer;
+  border: 2px solid #333;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+  background-color: #21a1f1;
+  transform: scale(1.1);
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #ddf8ff;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #282c34;
+  background-color: #fbbd61;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px #333;
+  transition: background-color 0.3s, box-shadow 0.2s;
+}
+
+button:hover {
+  background-color: #f19021;
+}
+
+button:active {
+  box-shadow: 0 2px #333;
+  transform: translateY(2px);
 }
